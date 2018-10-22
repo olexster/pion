@@ -40,11 +40,10 @@ slu$hx<-slu$hy<-NA
 slu$kr<-NA
 slu$pionX<-slu$pionY<-NA
 
-poziomy<-c(0,6.8,11.2,22.80,33)
-poziomy<-c(0,c(diff(poziomy)/2,0)+poziomy)
+ poziomy<-#c(0,6.8,11.2,22.80,33) zmienic na arusz xlsx
 slu$poz<-cut(slu$H,
-             poziomy,
-             labels <-c(0,6.8,11.2,22.80,33)
+             c(0,c(diff(poziomy)/2,0)+poziomy),
+             labels <-poziomy
 )
 
 

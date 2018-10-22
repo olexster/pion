@@ -2,7 +2,9 @@ library(readr)
 library(readxl)
 library(xlsx)
 
-plik<-"~/_budowy/Pulawy azoty Siarczan/obserwacje/pionowosc/K77.xlsx"
+# plik<-"~/_budowy/Pulawy azoty Siarczan/obserwacje/pionowosc/K77.xlsx"
+plik<-choose.files()
+# wyswietal okno z pytaniem o plik
 slu <- read_excel(plik, 
                   sheet = "punkty",
                   col_names = c("nr","X", "Y" ,"H"),

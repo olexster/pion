@@ -98,6 +98,11 @@ profil<- read_excel(plik,
 # <-data.frame(he=c(200,240,300,400,450,500),
 #                    h=c(0.200,0.240,0.300,0.400,0.450,0.500),
 #                    b=c(0.200,0.240,0.300,0.300,0.300,0.300))
+
+
+
+# /////////////////////////////////////////////////
+# poczatek bloku przypisywanie profili do punktów z pomiaru 
 # slu$he[which(slu$osX=="25")]<-300
 slu$he[which(slu$osX=="E")]<-"A240"
 # slu$he[which(slu$osY=="D.5")]<-"HEB300"
@@ -146,6 +151,10 @@ slu$he[which((slu$osY==2|
                 slu$osX=="A"
               ))]<-"B450"
 slu$he[which((slu$osX=="A"|slu$osX=="B")& slu$osY==7)]<-"B340"
+# koniec bloku przypisywanie profili do punktów z pomiaru 
+# /////////////////////////////////////////
+
+
 slu$osY[which((slu$osX=="A"|
                 slu$osX=="B"|
                 slu$osX=="C"|

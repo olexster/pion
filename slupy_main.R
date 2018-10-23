@@ -40,10 +40,13 @@ slu$hx<-slu$hy<-NA
 slu$kr<-NA
 slu$pionX<-slu$pionY<-NA
 
- poziomy<-#c(0,6.8,11.2,22.80,33) zmienic na arusz xlsx
+ poziomy<-read_excel(plik, 
+                     sheet = "poziomy",
+                     col_names = T,
+                     col_types = c("text", "numeric"),skip = 0)
 slu$poz<-cut(slu$H,
-             c(0,c(diff(poziomy)/2,0)+poziomy),
-             labels <-poziomy
+             c(0,c(diff(poziomy$war)/2,0)+poziomy$war),
+             labels <-poziomy$nazwa
 )
 
 

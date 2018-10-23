@@ -104,53 +104,53 @@ profil<- read_excel(plik,
 # /////////////////////////////////////////////////
 # poczatek bloku przypisywanie profili do punktów z pomiaru 
 # slu$he[which(slu$osX=="25")]<-300
-slu$he[which(slu$osX=="E")]<-"A240"
-# slu$he[which(slu$osY=="D.5")]<-"HEB300"
-slu$he[which(slu$osX=="C")]<-"B450"
-# slu$he[which(slu$osY=="A.7")]<-"HEB300"
-# slu$he[which(slu$osY=="K1")]<-200
-
-# slu$he[which(slu$osX=="A"|slu$osX=="C"&(
-  #   slu$osY=="8"))
-  # ]<-"B450"
-# slu$he<-"IPE400"
-# slu$he[which(slu$osY=="7")]<-"B340"
-# slu$he[which(slu$osX=="B" & slu$osY=="8")]<-"B500"
-# slu$he[which(slu$osX=="D"|slu$osX=="E")]<-"A240"
-slu$he[which((slu$osY==3|
-                slu$osY==4|
-                slu$osY==5
-              )&(
-                slu$osX=="B"
-                ))]<-"B600"
-slu$he[which((slu$osY==2|
-                slu$osY==8|
-                slu$osY==6
-              )&(
-                slu$osX=="B"
-                ))]<-"B500"
-slu$he[which((slu$osY==2|
-                slu$osY==3|
-                slu$osY==4
-              )&(
-                slu$osX=="D"
-                ))]<-"B340"
-slu$he[which((slu$osY==5|
-                slu$osY==6|
-                slu$osY==8
-              )&(
-                slu$osX=="D"
-                ))]<-"A240"
-slu$he[which((slu$osY==2|
-                slu$osY==3|
-                slu$osY==4|
-                slu$osY==5|
-                slu$osY==6|
-                slu$osY==8
-              )&(
-                slu$osX=="A"
-              ))]<-"B450"
-slu$he[which((slu$osX=="A"|slu$osX=="B")& slu$osY==7)]<-"B340"
+# slu$he[which(slu$osX=="E")]<-"A240"
+# # slu$he[which(slu$osY=="D.5")]<-"HEB300"
+# slu$he[which(slu$osX=="C")]<-"B450"
+# # slu$he[which(slu$osY=="A.7")]<-"HEB300"
+# # slu$he[which(slu$osY=="K1")]<-200
+# 
+# # slu$he[which(slu$osX=="A"|slu$osX=="C"&(
+#   #   slu$osY=="8"))
+#   # ]<-"B450"
+# # slu$he<-"IPE400"
+# # slu$he[which(slu$osY=="7")]<-"B340"
+# # slu$he[which(slu$osX=="B" & slu$osY=="8")]<-"B500"
+# # slu$he[which(slu$osX=="D"|slu$osX=="E")]<-"A240"
+# slu$he[which((slu$osY==3|
+#                 slu$osY==4|
+#                 slu$osY==5
+#               )&(
+#                 slu$osX=="B"
+#                 ))]<-"B600"
+# slu$he[which((slu$osY==2|
+#                 slu$osY==8|
+#                 slu$osY==6
+#               )&(
+#                 slu$osX=="B"
+#                 ))]<-"B500"
+# slu$he[which((slu$osY==2|
+#                 slu$osY==3|
+#                 slu$osY==4
+#               )&(
+#                 slu$osX=="D"
+#                 ))]<-"B340"
+# slu$he[which((slu$osY==5|
+#                 slu$osY==6|
+#                 slu$osY==8
+#               )&(
+#                 slu$osX=="D"
+#                 ))]<-"A240"
+# slu$he[which((slu$osY==2|
+#                 slu$osY==3|
+#                 slu$osY==4|
+#                 slu$osY==5|
+#                 slu$osY==6|
+#                 slu$osY==8
+#               )&(
+#                 slu$osX=="A"
+#               ))]<-"B450"
+# slu$he[which((slu$osX=="A"|slu$osX=="B")& slu$osY==7)]<-"B340"
 # koniec bloku przypisywanie profili do punktów z pomiaru 
 # /////////////////////////////////////////
 
@@ -192,10 +192,10 @@ for(i in 1:nrow(slu)){
 
 
 # write.xlsx()
-plik_wyn<-"K77.txt"
+plik_wyn<-"K67.txt"
 cat(c("*********************************","\n"),file = plik_wyn,append = T,sep = "\t"
 )
-data.frame()
+# data.frame()
 for(licz in levels(as.factor(slu$osX))){
   for(lit in levels(as.factor(slu$osY))){
     cat("os licz",
@@ -228,7 +228,7 @@ for(licz in levels(as.factor(slu$osX))){
     print(slu$hx[id_slu])
   }
 }
-slu$dY[which((slu$poz==0)&(slu$osY=="H")&(slu$osX=="23"))]
+# slu$dY[which((slu$poz==0)&(slu$osY=="H")&(slu$osX=="23"))]
 for(pn in 1:nrow(slu)){ #literki strony slupa
   ifelse(slu$dX[pn]>0,
          ifelse(slu$dY[pn]>0,
@@ -273,6 +273,6 @@ for(licz in levels(as.factor(slu$osX))){
     
   }
 }
-write.xlsx(x = slu,file = "k77.xlsx",sheetName = "slu",col.names = T,showNA = T)
+write.xlsx(x = slu,file = "k67.xlsx",sheetName = "slu",col.names = T,showNA = T,append = T)
 # sink()
 
